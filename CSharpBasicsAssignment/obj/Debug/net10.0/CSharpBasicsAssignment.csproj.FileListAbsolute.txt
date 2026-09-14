@@ -7,7 +7,6 @@ D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssi
 D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\CSharpBasicsAssignment.AssemblyInfoInputs.cache
 D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\CSharpBasicsAssignment.AssemblyInfo.cs
 D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\CSharpBasicsAssignment.csproj.CoreCompileInputs.cache
-D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\CSharpBasicsAssignment.sourcelink.json
 D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\CSharpBasicsAssignment.dll
 D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\refint\CSharpBasicsAssignment.dll
 D:\.NET Course\Assignments\Git & GItHub\omarsalem33-Assignment3\CSharpBasicsAssignment\obj\Debug\net10.0\CSharpBasicsAssignment.pdb

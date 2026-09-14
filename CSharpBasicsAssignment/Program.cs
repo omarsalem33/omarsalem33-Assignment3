@@ -19,8 +19,52 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        RunTypesDemo();
-    }
+        // RunTypesDemo();
+         RunValueVsReferenceDemo();
+        
+        Order o1 = new  Order
+        {
+            OrderId = 101,
+            CustomerName = "Omar Salem",
+            Quantity = 5,
+            UnitPrice = 50.00m,
+            TotalPrice = 0.00m, 
+            IsPaid = true,
+            DiscountPercent = 10.0, 
+            ShippingCity = "Ismailia",
+            Priority = 'H',
+            ItemCode = 9876543210L
+        };
+        o1.CalculateTotal();
+        Order o2 = o1;
+
+        Console.WriteLine("Order 1 ");
+        o1.PrintSummary();
+
+        Console.WriteLine("Order 2 ");
+        o2.PrintSummary();
+
+        o2.IsPaid = false;
+        Console.WriteLine($"is paid of O1 {o1.IsPaid} vs  O2 {o2.IsPaid}");
+      // o1 and o2 are reference the same address => class is reference type
+
+      object boxOrder = o1;
+      Order o3 = (Order)boxOrder;
+      Console.WriteLine(object.ReferenceEquals(o1, o3));
+      
+      o2.PrintSummary();    
+      
+      // value type like struct and primitives store data directly on stack 
+      // reference type like classes store actual obj data on Heap and keep only a memory reference/pointer on the Stack.
+      
+      
+      // Assigning a value type like (a = b) create two independent variables
+      // Assigning a reference type (o1 = o2) copies only pointer and making both variables point to exact same heap obj
+      
+      
+      // Storing a reference type inside an 'object' variable does not create a new object or perform boxing because the value is already a reference on the Heap—the object 
+      // variable simply receives a copy of that existing memory address.
+    } 
 
     public static void RunTypesDemo()
     {
@@ -102,5 +146,50 @@ public class Program
         Console.WriteLine($"Explicit (decimal)cast from float: {exolicitDecimal}");
         
     }
-}
+    public struct Point
+    {
+        public int x;
+        public int y;
+    }
+    public static void RunValueVsReferenceDemo()    
+    {
+        Point p1  = new Point {x = 1, y = 2};
+        Point p2 = p1;
+        p2.x = 99;
+        Console.WriteLine($"x in p1 => {p1.x} vs p2 => {p2.x}");
+        /*
+         * point is a struct => value type then is sorted in stack
+         *  p1 = p2 copy of data into a separate
+         * stack memory location  modifying p2.x affects only p2 memory leaving  p1 untouched
+         */
+    }
+
+    class Order
+    {
+        public int OrderId;
+        public string CustomerName;
+        public int Quantity;
+        public decimal UnitPrice; 
+        public decimal TotalPrice ;
+        public bool IsPaid;
+        public double DiscountPercent;
+        public string ShippingCity;
+        public char Priority;
+        public long ItemCode;
+
+        public  void CalculateTotal()
+        {
+            decimal factor = (decimal)(1.0 - (DiscountPercent / 100.0));
+            TotalPrice = Quantity * factor * UnitPrice;
+
+        }
+
+        public void PrintSummary()
+        {
+            Console.WriteLine($"Order id : {OrderId} Customer Name : '{CustomerName}' Total Price : {TotalPrice} is paid {IsPaid} ");
+        }
+
+    }
+    
+}               
  
