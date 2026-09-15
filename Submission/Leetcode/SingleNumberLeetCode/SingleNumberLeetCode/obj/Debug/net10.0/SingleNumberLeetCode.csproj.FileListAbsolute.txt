@@ -1,0 +1,14 @@
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.AssemblyInfoInputs.cache
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.AssemblyInfo.cs
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.csproj.CoreCompileInputs.cache
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\bin\Debug\net10.0\SingleNumberLeetCode.exe
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\bin\Debug\net10.0\SingleNumberLeetCode.deps.json
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\bin\Debug\net10.0\SingleNumberLeetCode.runtimeconfig.json
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\bin\Debug\net10.0\SingleNumberLeetCode.dll
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\bin\Debug\net10.0\SingleNumberLeetCode.pdb
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.dll
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\refint\SingleNumberLeetCode.dll
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.pdb
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\SingleNumberLeetCode.genruntimeconfig.cache
+D:\.NET Course\SingleNumberLeetCode\SingleNumberLeetCode\obj\Debug\net10.0\ref\SingleNumberLeetCode.dll
