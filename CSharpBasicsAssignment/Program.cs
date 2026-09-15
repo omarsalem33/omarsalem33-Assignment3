@@ -1,42 +1,21 @@
 ﻿using System;
 class Program
-{    
-    // Main method to run all demonstrations
-    static void Main(string[] args)
-    {
-        Program demo = new Program();
-
-        Console.WriteLine("--- D1: Scope Demonstrations ---");
-        demo.ReadFieldFirstTime();
-        demo.ReadFieldSecondTime();
-        demo.DemonstrateMethodScope();
-        DemonstrateBlockScope();
-
-        Console.WriteLine("\n--- D2: Compound Assignment Demonstrations ---");
-        DemonstrateCompoundAssignments();
-    }
-
-    // Field Scope: Accessible to any non-static method inside this class instance
+{
+    // D1 — Scope
     private int _appCounter = 42;
-
-    public void ReadFieldFirstTime()
-    {
-        Console.WriteLine($"[ReadFieldFirstTime] Counter value: {_appCounter}");
-    }
+    public void ReadFieldFirstTime() => Console.WriteLine($"[ReadFieldFirstTime] Counter value: {_appCounter}");
+    
 
     public void ReadFieldSecondTime()
-    {
-        Console.WriteLine($"[ReadFieldSecondTime] Counter value: {_appCounter}");
-    }
+        => Console.WriteLine($"[ReadFieldSecondTime] Counter value: {_appCounter}");
+   
 
-    // Method Scope: Local variables exist only within the method lifetime
     public void DemonstrateMethodScope()
     {
         string secretToken = "ABC-123";
         Console.WriteLine($"[Method Scope] Inside method, token is: {secretToken}");
     }
 
-    // Block Scope: Variables declared in loops/blocks exist only within those braces
     public static void DemonstrateBlockScope()
     {
         for (int i = 0; i < 3; i++)
@@ -54,28 +33,72 @@ class Program
         // CS0103: The name 'loopBodyVar' does not exist in the current context.
         // Reason: 'loopBodyVar' was declared inside the loop's block scope ({}) and went out of scope at the closing brace.
     }
-    
-    // D2 — Composite (compound assignment) operators
 
+    // D2 — Composite (compound assignment) operators
     public static void DemonstrateCompoundAssignments()
     {
         int total = 100;
         Console.WriteLine($"Initial total: {total}");
 
-        total += 25; //  addition
-        // Long form equivalent: total = total + 25;
+        total += 25; 
         Console.WriteLine($"After += 25 : {total}");
 
-        total -= 15; //  subtraction
+        total -= 15; 
         Console.WriteLine($"After -= 15 : {total}");
 
-        total *= 2;  //  multiplication
+        total *= 2;  
         Console.WriteLine($"After *= 2  : {total}");
 
-        total /= 4;  //  division
+        total /= 4; 
         Console.WriteLine($"After /= 4  : {total}");
 
-        total %= 7;  //  modulus 
+        total %= 7;  
         Console.WriteLine($"After %= 7  : {total}");
+    }
+
+    // D3 — Single-character bitwise operators
+    public static void DemonstrateBitwiseOperators()
+    {
+        int a = 12; // Binary: 1100
+        int b = 10; // Binary: 1010
+
+        // Bitwise AND (&): 1 where both bits are 1
+        //   1100 (12)
+        // & 1010 (10)
+        // ------
+        //   1000 (8)
+        Console.WriteLine($"a & b = {a & b}");
+
+        // Bitwise OR (|): 1 where at least one bit is 1
+        //   1100 (12)
+        // | 1010 (10)
+        // ------
+        //   1110 (14)
+        Console.WriteLine($"a | b = {a | b}");
+
+        // Bitwise XOR (^): 1 where bits are different
+        //   1100 (12)
+        // ^ 1010 (10)
+        // ------
+        //   0110 (6)
+        Console.WriteLine($"a ^ b = {a ^ b}");
+    }
+
+    // Main entry point
+    static void Main(string[] args)
+    {
+        Program demo = new Program();
+
+        Console.WriteLine("--- D1: Scope Demonstrations ---");
+        demo.ReadFieldFirstTime();
+        demo.ReadFieldSecondTime();
+        demo.DemonstrateMethodScope();
+        DemonstrateBlockScope();
+
+        Console.WriteLine("\n--- D2: Compound Assignment Demonstrations ---");
+        DemonstrateCompoundAssignments();
+
+        Console.WriteLine("\n--- D3: Bitwise Operators Demonstrations ---");
+        DemonstrateBitwiseOperators();
     }
 }
